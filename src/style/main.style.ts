@@ -26,7 +26,8 @@ export const Button = styled.button<ButtonInterfface>`
     margin: 10px auto;
     padding: 7px;
     min-width: 200px;
-    outline: none
+    outline: none;
+    cursor: pointer
 `
 
 export const QuestionWrapper = styled.div`
