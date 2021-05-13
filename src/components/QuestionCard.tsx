@@ -20,7 +20,6 @@ const QuestionCard: React.FC<AnswerProps> = ({
 				<div key={`${questionNr}-${id}`}>
 					{/* double exclamation mark sets the object to boolean */}
 					<Button
-						start={false}
 						disabled={!!userAnswer}
 						value={answer}
 						onClick={callback}

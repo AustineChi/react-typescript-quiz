@@ -50,7 +50,7 @@ const App = () => {
 		<Container>
 			<Title>QUIZ</Title>
 			{gameOver && (
-				<Button start={true} onClick={startQuiz}>
+				<Button start="true" onClick={startQuiz}>
 					Start
 				</Button>
 			)}

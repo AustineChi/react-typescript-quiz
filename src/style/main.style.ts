@@ -2,7 +2,7 @@
 import styled from "styled-components";
 
 type ButtonInterfface = {
-    start: boolean;
+    start?: string;
 };
 
 export const Container = styled.div`
@@ -27,7 +27,7 @@ export const Button = styled.button<ButtonInterfface>`
     padding: 7px;
     min-width: 200px;
     outline: none;
-    cursor: pointer
+    cursor: po inter
 `
 
 export const QuestionWrapper = styled.div`
