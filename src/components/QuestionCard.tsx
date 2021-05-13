@@ -21,6 +21,15 @@ const QuestionCard: React.FC<AnswerProps> = ({
 					{/* double exclamation mark sets the object to boolean */}
 					<Button
 						disabled={!!userAnswer}
+						status={
+							!!userAnswer
+								? userAnswer.correctAnswer === answer
+									? "rightAnswer"
+									: userAnswer.providedAnswer === answer
+									? "wrongAnswer"
+									: "noAnswer"
+								: "noAnswer"
+						}
 						value={answer}
 						onClick={callback}
 					>

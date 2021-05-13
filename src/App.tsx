@@ -42,15 +42,17 @@ const App = () => {
 			correctAnswer: questions[numbr].correct_answer,
 		};
 		setUserAnswers((prev) => [...prev, answerObject]);
-		if (numbr + 1 < TotalQuestions) setNumbr(numbr + 1);
-		if (userAnswers.length === TotalQuestions - 1) setGameOver(true);
+		setTimeout(() => {
+			if (numbr + 1 < TotalQuestions) setNumbr(numbr + 1);
+			if (userAnswers.length === TotalQuestions - 1) setGameOver(true);
+		}, 2000);
 	};
 
 	return (
 		<Container>
 			<Title>QUIZ</Title>
 			{gameOver && (
-				<Button start="true" onClick={startQuiz}>
+				<Button status="start" onClick={startQuiz}>
 					Start
 				</Button>
 			)}

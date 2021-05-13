@@ -2,7 +2,7 @@
 import styled from "styled-components";
 
 type ButtonInterfface = {
-    start?: string;
+    status?: string;
 };
 
 export const Container = styled.div`
@@ -17,7 +17,8 @@ export const Container = styled.div`
 `;
 
 export const Button = styled.button<ButtonInterfface>`
-    background-color:  ${({ start }) => (start ? "#5eba7d" : "#fff6bb")}; 
+    background-color:  ${({ status }) => ( (status === 'start' && '#5eba7d') ||
+   (status === 'rightAnswer' && 'green') ||  (status === 'wrongAnswer' && 'red') ||  (status === 'noAnswer' && '#fff6bb') )}; 
     color: #333;
     border-radius: 15px;
     border: none;
@@ -27,7 +28,7 @@ export const Button = styled.button<ButtonInterfface>`
     padding: 7px;
     min-width: 200px;
     outline: none;
-    cursor: po inter
+    cursor: pointer
 `
 
 export const QuestionWrapper = styled.div`
